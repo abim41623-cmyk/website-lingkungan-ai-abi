@@ -1,0 +1,174 @@
+/* --- Root Variables & Reset --- */
+:root {
+    --primary-green: #2e7d32;
+    --secondary-green: #4caf50;
+    --light-bg: #f8faf8;
+    --white: #ffffff;
+    --danger: #e53935;
+    --text-dark: #2c3e50;
+    --text-muted: #7f8c8d;
+    --shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+* {
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    background-color: var(--light-bg);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* --- Layout Login --- */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #2e7d32 0%, #a5d6a7 100%);
+}
+
+.login-card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-card h1 {
+    color: var(--primary-green);
+    margin-bottom: 10px;
+}
+
+/* --- Form Elements --- */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+input[type="email"], 
+input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    outline: none;
+}
+
+input:focus {
+    border-color: var(--primary-green);
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-login {
+    background-color: var(--primary-green);
+    color: white;
+}
+
+.btn-login:hover {
+    background-color: #1b5e20;
+    transform: translateY(-2px);
+}
+
+/* --- Dashboard Navigation --- */
+.navbar {
+    background: var(--white);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.btn-logout {
+    background: var(--danger);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+/* --- Main Content Grid --- */
+.main-content {
+    padding: 30px 5%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+}
+
+.card {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+/* --- Fitur AI Section --- */
+.ai-upload-area {
+    border: 3px dashed #cbd5e0;
+    padding: 50px;
+    text-align: center;
+    border-radius: 15px;
+    background: #fafafa;
+    cursor: pointer;
+}
+
+.ai-upload-area:hover {
+    border-color: var(--primary-green);
+    background: var(--light-bg);
+}
+
+.result-box {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    background: #e3f2fd;
+    border-left: 5px solid #2196f3;
+}
+
+/* --- Edukasi List --- */
+.edu-list {
+    list-style: none;
+    padding: 0;
+}
+
+.edu-card {
+    padding: 15px;
+    margin-bottom: 10px;
+    background: #f1f8e9;
+    border-radius: 10px;
+    border-left: 4px solid var(--secondary-green);
+}
+
+/* --- Responsive Desktop vs Mobile --- */
+@media (max-width: 992px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+}
